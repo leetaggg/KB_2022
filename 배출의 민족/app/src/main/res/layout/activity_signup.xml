@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/ID"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_above="@id/PW"
+        android:layout_margin="10dp"
+        android:background="@drawable/round_wiget"
+        android:hint="아이디를 입력해주세요."
+        android:fontFamily="@font/custom_font_family"/>
+
+    <EditText
+        android:id="@+id/PW"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/Name"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/round_wiget"
+        android:hint="비밀번호를 입력해주세요."
+        android:fontFamily="@font/custom_font_family"/>
+    <EditText
+        android:id="@+id/Name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/round_wiget"
+        android:hint="이름을 입력해주세요."
+        android:fontFamily="@font/custom_font_family"/>
+
+    <Spinner
+        android:id="@+id/Gender"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/Name"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/round_wiget"
+        android:entries="@array/성별"
+        android:fontFamily="@font/custom_font_family"
+        android:text="성별을 선택해주세요." />
+    <Button
+        android:id="@+id/Signup_request"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Gender"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:text="회원가입"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Gender"
+        android:fontFamily="@font/custom_font_family"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical">
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/custom_font_family"
+                android:layout_weight="1"
+                android:text="Button1" />
+
+            <ImageButton
+                android:id="@+id/R_delete"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignEnd="@+id/R_writer"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/ic_baseline_delete_24"
+                android:backgroundTint="#B4F0B4"
+                android:textColor="#FF333333" />
+
+            <TextView
+                android:id="@+id/R_title"
+                android:fontFamily="@font/custom_font_family"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/Community_Comment"
+                android:layout_alignTop="@+id/R_delete"
+                android:layout_marginStart="0dp"
+                android:background="@drawable/round_wiget"
+                android:textColor="#FF333333"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/R_writer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/Community_Comment"
+                android:layout_marginTop="80dp"
+                android:fontFamily="@font/custom_font_family"
+                android:background="@drawable/round_wiget"
+                android:textColor="#FF333333"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/R_delete" />
+
+            <TextView
+                android:id="@+id/R_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/Community_Comment"
+                android:layout_alignEnd="@+id/Community_Comment"
+                android:layout_marginTop="130dp"
+                android:background="@drawable/round_wiget"
+                android:fontFamily="@font/custom_font_family"
+                android:textColor="#FF333333"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/R_writer" />
+
+            <ImageButton
+                android:id="@+id/image_unlike"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_below="@+id/R_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="60dp"
+                android:background="@color/white"
+                android:textColor="#FF333333"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/R_like"
+                app:layout_constraintTop_toBottomOf="@+id/R_content"
+                app:srcCompat="@drawable/ic_baseline_thumb_down_24" />
+
+            <TextView
+                android:id="@+id/R_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/image_like"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="130dp"
+                android:fontFamily="@font/custom_font_family"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:layout_toStartOf="@+id/image_unlike"
+                android:layout_toEndOf="@+id/image_like"
+                android:gravity="center"
+                android:textColor="#FF333333"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/R_content" />
+
+            <ImageButton
+                android:id="@+id/image_like"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_below="@+id/R_content"
+                android:layout_alignStart="@+id/R_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="0dp"
+                android:background="@color/white"
+                android:textColor="#FF333333"
+                app:srcCompat="@drawable/ic_baseline_thumb_up_24" />
+
+            <ListView
+                android:id="@+id/Community_Comment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/R_like"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="55dp"
+                android:layout_marginEnd="10dp"
+                android:divider="#FFFFFF"
+                android:dividerHeight="0px"
+                android:fontFamily="@font/custom_font_family"
+                android:scrollbars="none"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"></ListView>
+        </RelativeLayout>
+    </ScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id = "@+id/Comment_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/custom_font_family"
+            android:backgroundTint = "#B4F0B4"
+            android:hint = "댓글을 입력해주세요" />
+
+        <Button
+            android:id="@+id/Comment_complete"
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/custom_font_family"
+            android:layout_weight="1"
+            android:text="완료" />
+
+    </LinearLayout>
+</LinearLayout>

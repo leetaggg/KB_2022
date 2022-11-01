@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Widget.KB_2022.AppWidget.Container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/Theme.KB_2022.AppWidgetContainer">
+
+    <TextView
+        android:id="@+id/appwidget_text"
+        style="@style/Widget.KB_2022.AppWidget.InnerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="쓰레기의 종류가 궁금하시면 카메라 이미지를 눌러주세요!"
+        android:fontFamily="@font/custom_font_family"
+        android:textColor="@color/black" />
+
+    <ImageButton
+        android:id="@+id/appwidget_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/appwidget_text"
+        android:layout_alignEnd="@+id/appwidget_text"
+        android:layout_alignBottom="@+id/appwidget_text"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/white"
+        android:src="@drawable/ic_baseline_camera_alt_24_green" />
+
+
+</RelativeLayout>
